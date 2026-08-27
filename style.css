@@ -61,28 +61,59 @@ nav a.active {
 }
 
 .note-link {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
   margin-left: 0.12rem;
+  color: #315a8a;
+  font: inherit;
   font-style: normal;
   font-size: 0.78em;
-  vertical-align: super;
-}
-
-.fact-note {
-  margin: -0.55rem 0 1.2rem 1rem;
-  padding: 0.55rem 0.75rem;
-  border-left: 2px solid #bbb;
-  color: #555;
-  font-size: 0.92rem;
-}
-
-.fact-note summary {
   cursor: pointer;
-  color: #315a8a;
-  font-style: normal;
 }
 
-.fact-note p {
-  margin: 0.5rem 0 0;
+.note-link:hover {
+  text-decoration: underline;
+}
+
+.fact-popup {
+  position: relative;
+  max-width: 430px;
+  width: calc(100% - 48px);
+  padding: 1.25rem 1.4rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+}
+
+.fact-popup::backdrop {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.fact-popup p {
+  margin: 0;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.55rem;
+  border: 0;
+  background: transparent;
+  color: #777;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: #222;
 }
 
 @media (max-width: 600px) {
