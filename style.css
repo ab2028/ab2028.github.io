@@ -60,6 +60,31 @@ nav a.active {
   font-size: 0.95rem;
 }
 
+.note-link {
+  margin-left: 0.12rem;
+  font-style: normal;
+  font-size: 0.78em;
+  vertical-align: super;
+}
+
+.fact-note {
+  margin: -0.55rem 0 1.2rem 1rem;
+  padding: 0.55rem 0.75rem;
+  border-left: 2px solid #bbb;
+  color: #555;
+  font-size: 0.92rem;
+}
+
+.fact-note summary {
+  cursor: pointer;
+  color: #315a8a;
+  font-style: normal;
+}
+
+.fact-note p {
+  margin: 0.5rem 0 0;
+}
+
 @media (max-width: 600px) {
   body {
     margin-top: 36px;
