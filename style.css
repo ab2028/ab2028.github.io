@@ -64,64 +64,65 @@ nav a.active {
   appearance: none;
   border: 0;
   background: none;
-  padding: 0;
-  margin-left: 0.12rem;
+  padding: 0 0.08rem;
+  margin-left: 0.08rem;
   color: #315a8a;
-  font: inherit;
+  font-family: inherit;
   font-style: normal;
-  font-size: 0.78em;
+  font-size: 0.8em;
+  line-height: 1;
   cursor: pointer;
+  vertical-align: super;
 }
 
-.note-link:hover {
+.note-link:hover,
+.note-link:focus-visible {
   text-decoration: underline;
 }
 
-.fact-popup {
-  position: relative;
-  max-width: 430px;
-  width: calc(100% - 48px);
-  padding: 1.25rem 1.4rem;
-  border: 1px solid #bbb;
-  border-radius: 6px;
-  background: #fff;
-  color: #333;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+.inline-note {
+  margin: -0.55rem 0 1.35rem 1rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 2px solid #bbb;
+  background: #fafafa;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
-.fact-popup::backdrop {
-  background: rgba(0, 0, 0, 0.2);
+.inline-note[hidden] {
+  display: none;
 }
 
-.fact-popup p {
-  margin: 0;
-}
-
-.popup-close {
-  position: absolute;
-  top: 0.35rem;
-  right: 0.55rem;
-  border: 0;
-  background: transparent;
-  color: #777;
-  font-size: 1.35rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.popup-close:hover {
-  color: #222;
+@media (max-width: 800px) {
+  body {
+    max-width: none;
+    margin: 44px auto;
+    padding: 0 28px;
+  }
 }
 
 @media (max-width: 600px) {
   body {
-    margin-top: 36px;
+    margin-top: 32px;
+    padding: 0 18px;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   nav {
     gap: 0.75rem 1rem;
+  }
+
+  .inline-note {
+    margin: -0.45rem 0 1.2rem 0;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .note-link {
+    padding: 0.05rem 0.12rem;
   }
 }
