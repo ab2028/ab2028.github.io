@@ -60,6 +60,21 @@ nav a.active {
   font-size: 0.95rem;
 }
 
+.entry-divider {
+  width: 40px;
+  border-top: 1px solid #aaa;
+  margin: 14px auto 8px;
+}
+
+.entry-links {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.entry-links a {
+  margin: 0 8px;
+}
+
 .note-link {
   appearance: none;
   border: 0;
