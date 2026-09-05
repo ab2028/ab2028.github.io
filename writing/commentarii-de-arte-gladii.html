@@ -6,6 +6,29 @@
   <title>Commentarii de arte gladii — Ava Berenji</title>
   <link rel="stylesheet" href="../style.css">
   <script src="../theme.js"></script>
+  <style>
+    .footnote-toggle {
+      appearance: none;
+      border: 0;
+      background: none;
+      color: inherit;
+      font: inherit;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .footnote-box {
+      display: none;
+      margin: 0.45rem 1.5rem 1.15rem;
+      padding: 0.75rem 1rem;
+      border-left: 3px solid rgba(127,127,127,0.45);
+      background: rgba(127,127,127,0.08);
+      border-radius: 0 6px 6px 0;
+    }
+    .footnote-box.open { display: block; }
+    .footnote-box p { margin: 0; }
+  </style>
 </head>
 <body>
   <header>
@@ -47,29 +70,44 @@
 
     <hr style="margin:2rem 0 1.6rem; border:0; border-top:1px solid rgba(127,127,127,0.45);">
 
-    <p>In conclavi artis gladii, tres gentes sunt, quarum una appellatur Epee, altera Rudis, tertia Saber <a href="#fn1">[1]</a>. <strong>Hae</strong> legibus, gladiis, animis inter se differunt, sed omnes eandem terram incolunt et ab <strong>eodem</strong> sacro iudice, qui arbiter appellatur, reguntur.</p>
-    <p style="color:#777; margin-top:-0.35rem;"><i>In the room of fencing, there are three tribes, one of which is called Épée, the second called Foil, and the third called Sabre <a href="#fn1">[1]</a>. These tribes differ among themselves in laws, swords, and disposition, but all three tribes inhabit the same land and are ruled by the same sacred judge, who is called the referee.</i></p>
-    <p id="fn1" class="meta">[1] Mirrors the opening line of Caesar: <i>"Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur."</i> - “All Gaul is divided into three parts, one of which the Belgae inhabit, the Aquitani another, the third those who are called Celts by their own language, and Gauls in ours."</p>
+    <p>In conclavi artis gladii, tres gentes sunt, quarum una appellatur Epee, altera Rudis, tertia Saber <button class="footnote-toggle" type="button" data-footnote="fn1" aria-expanded="false">[1]</button>. <strong>Hae</strong> legibus, gladiis, animis inter se differunt, sed omnes eandem terram incolunt et ab <strong>eodem</strong> sacro iudice, qui arbiter appellatur, reguntur.</p>
+    <p style="color:#777; margin-top:-0.35rem;"><i>In the room of fencing, there are three tribes, one of which is called Épée, the second called Foil, and the third called Sabre <button class="footnote-toggle" type="button" data-footnote="fn1" aria-expanded="false">[1]</button>. These tribes differ among themselves in laws, swords, and disposition, but all three tribes inhabit the same land and are ruled by the same sacred judge, who is called the referee.</i></p>
+    <div id="fn1" class="footnote-box"><p>[1] Mirrors the opening line of Caesar: <i>"Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur."</i> - “All Gaul is divided into three parts, one of which the Belgae inhabit, the Aquitani another, the third those who are called Celts by their own language, and Gauls in ours."</p></div>
 
-    <p>Epera Martem sicut ceterae gentes venerantur. Cum duo nobiles in contentionem veniunt, arma capiunt atque uti legem Martis esse arbitrantur, qui victor est primum sanguinem haurit. Itaque quamlibet partem corporis pellere possunt, et ob eam causam vestimenta alba gerunt ut sanguis clare videri possit. <a href="#fn2">[2]</a></p>
-    <p style="color:#777; margin-top:-0.35rem;"><i>The Épée worship Mars just as the other tribes do. When two noble members enter into a dispute, they take up arms, and as they believe to be the law of Mars, he who draws first blood is the victor. Thus they can hit any part of the body, and for this reason they wear white garments so that blood can be clearly seen. <a href="#fn2">[2]</a></i></p>
-    <p id="fn2" class="meta">[2] Based on historical origins: 19th-century épée de combat. Duels between French nobles were fought until first blood was drawn. Today, touches are counted electronically.</p>
+    <p>Epera Martem sicut ceterae gentes venerantur. Cum duo nobiles in contentionem veniunt, arma capiunt atque uti legem Martis esse arbitrantur, qui victor est primum sanguinem haurit. Itaque quamlibet partem corporis pellere possunt, et ob eam causam vestimenta alba gerunt ut sanguis clare videri possit. <button class="footnote-toggle" type="button" data-footnote="fn2" aria-expanded="false">[2]</button></p>
+    <p style="color:#777; margin-top:-0.35rem;"><i>The Épée worship Mars just as the other tribes do. When two noble members enter into a dispute, they take up arms, and as they believe to be the law of Mars, he who draws first blood is the victor. Thus they can hit any part of the body, and for this reason they wear white garments so that blood can be clearly seen. <button class="footnote-toggle" type="button" data-footnote="fn2" aria-expanded="false">[2]</button></i></p>
+    <div id="fn2" class="footnote-box"><p>[2] Based on historical origins: 19th-century épée de combat. Duels between French nobles were fought until first blood was drawn. Today, touches are counted electronically.</p></div>
 
     <p>Ut manus bracchiaque defendant, in pugna longiorem distantiam servant, saepe ita diu procedunt et recedunt sine ictibus aut etiam minis; hic mos a ceteris gentibus irridetur, quarum mos est ferocior esse.</p>
     <p style="color:#777; margin-top:-0.35rem;"><i>So that they may defend their hands and arms, in battle they keep a longer distance, so often they advance and retreat for a long time without blows or even threats; this custom is mocked by the other tribes, whose custom is to be more aggressive.</i></p>
 
-    <p>Credunt Rudes et Sabrii Martem legem sacram prioritatis edicisse, qua tantum unus singulatim ius aggrediendi datur. <a href="#fn3">[3]</a> Si saepe disputatur quis hoc ius divinum meruerit (et quidem fit), arbitro lis componenda est. Ita hae gentes ferocius pugnant ut utilissimum favorem divinum consequantur. <a href="#fn4">[4]</a> Epera hunc morem haeresim putant. Si et aggressor et defensor simul <strong>pellerent</strong>, in vero duello ambo perirent, tamen apud Rudes Sabriosque, aggressor vincit. <a href="#fn5">[5]</a></p>
-    <p style="color:#777; margin-top:-0.35rem;"><i>The Foil and Sabre believe Mars has declared a sacred law of priority, by which only one fencer at a time is granted the right of attacking. <a href="#fn3">[3]</a> If it is disputed who has earned this divine right (and indeed it happens often), the referee must settle the dispute. Thus these tribes fight more aggressively in order to attain the most advantageous divine favor. <a href="#fn4">[4]</a> The Épée think that these customs are heresy. If both attacker and defender <strong>were to</strong> hit at the same time, in a true duel both would perish, yet among the Foil and Sabre the attacker prevails. <a href="#fn5">[5]</a></i></p>
-    <p id="fn3" class="meta">[3] Priority (aka right-of-way) is used in Foil and Sabre to resolve simultaneous (double) touches and encourage more orderly combat. Losing priority doesn’t prevent the other fencer from attacking, so this is oversimplified, rather, priority decides who gets the point upon a double touch.</p>
-    <p id="fn4" class="meta">[4] Also oversimplified. In general, whoever attacks first gains priority, but a successful defense can transfer priority to the defender. Because of the complexity, debates often arise with referees.</p>
-    <p id="fn5" class="meta">[5] Épée allows double touches, which were also not uncommon in historical duels. Again, “the attacker prevails” is an oversimplication; priority decides who gets the point.</p>
+    <p>Credunt Rudes et Sabrii Martem legem sacram prioritatis edicisse, qua tantum unus singulatim ius aggrediendi datur. <button class="footnote-toggle" type="button" data-footnote="fn3" aria-expanded="false">[3]</button> Si saepe disputatur quis hoc ius divinum meruerit (et quidem fit), arbitro lis componenda est. Ita hae gentes ferocius pugnant ut utilissimum favorem divinum consequantur. <button class="footnote-toggle" type="button" data-footnote="fn4" aria-expanded="false">[4]</button> Epera hunc morem haeresim putant. Si et aggressor et defensor simul <strong>pellerent</strong>, in vero duello ambo perirent, tamen apud Rudes Sabriosque, aggressor vincit. <button class="footnote-toggle" type="button" data-footnote="fn5" aria-expanded="false">[5]</button></p>
+    <p style="color:#777; margin-top:-0.35rem;"><i>The Foil and Sabre believe Mars has declared a sacred law of priority, by which only one fencer at a time is granted the right of attacking. <button class="footnote-toggle" type="button" data-footnote="fn3" aria-expanded="false">[3]</button> If it is disputed who has earned this divine right (and indeed it happens often), the referee must settle the dispute. Thus these tribes fight more aggressively in order to attain the most advantageous divine favor. <button class="footnote-toggle" type="button" data-footnote="fn4" aria-expanded="false">[4]</button> The Épée think that these customs are heresy. If both attacker and defender <strong>were to</strong> hit at the same time, in a true duel both would perish, yet among the Foil and Sabre the attacker prevails. <button class="footnote-toggle" type="button" data-footnote="fn5" aria-expanded="false">[5]</button></i></p>
+    <div id="fn3" class="footnote-box"><p>[3] Priority (aka right-of-way) is used in Foil and Sabre to resolve simultaneous (double) touches and encourage more orderly combat. Losing priority doesn’t prevent the other fencer from attacking, so this is oversimplified, rather, priority decides who gets the point upon a double touch.</p></div>
+    <div id="fn4" class="footnote-box"><p>[4] Also oversimplified. In general, whoever attacks first gains priority, but a successful defense can transfer priority to the defender. Because of the complexity, debates often arise with referees.</p></div>
+    <div id="fn5" class="footnote-box"><p>[5] Épée allows double touches, which were also not uncommon in historical duels. Again, “the attacker prevails” is an oversimplication; priority decides who gets the point.</p></div>
 
-    <p>Praeterea, non omnes partes corporis pelli possunt, sed solum eae habitae letales, maxime pectus. Apud Rudes, hoc fit <strong>veras pugnas exercendi causa</strong>. Sabrii autem <strong>se equis imponunt</strong>, et turpe equum vulnerare habetur; ita solum supra crura pellunt. Propter velocitatem equorum, Sabrii sunt gens sola quae <strong>acie</strong> gladii <strong>utatur</strong>, pro mucrone. <a href="#fn6">[6]</a></p>
-    <p style="color:#777; margin-top:-0.35rem;"><i>Furthermore, not all parts of the body may be struck, but only those areas considered lethal, especially the chest. Among the Foil, this is done for the sake of practicing for real battles. However, the Sabre mount themselves on horses, and it is considered improper to wound the horse; thus they hit only above the legs. On account of the speed of the horses, the Sabre are the only tribe who use the edge of their sword, instead of the tip. <a href="#fn6">[6]</a></i></p>
-    <p id="fn6" class="meta">[6] Based on historical origins: Foil developed in France as a training weapon for real duels. Sabre originates from the mounted combat style of tribes in Central Asia/Eurasia. Hitting below the hips is still considered off-target today.</p>
+    <p>Praeterea, non omnes partes corporis pelli possunt, sed solum eae habitae letales, maxime pectus. Apud Rudes, hoc fit <strong>veras pugnas exercendi causa</strong>. Sabrii autem <strong>se equis imponunt</strong>, et turpe equum vulnerare habetur; ita solum supra crura pellunt. Propter velocitatem equorum, Sabrii sunt gens sola quae <strong>acie</strong> gladii <strong>utatur</strong>, pro mucrone. <button class="footnote-toggle" type="button" data-footnote="fn6" aria-expanded="false">[6]</button></p>
+    <p style="color:#777; margin-top:-0.35rem;"><i>Furthermore, not all parts of the body may be struck, but only those areas considered lethal, especially the chest. Among the Foil, this is done for the sake of practicing for real battles. However, the Sabre mount themselves on horses, and it is considered improper to wound the horse; thus they hit only above the legs. On account of the speed of the horses, the Sabre are the only tribe who use the edge of their sword, instead of the tip. <button class="footnote-toggle" type="button" data-footnote="fn6" aria-expanded="false">[6]</button></i></p>
+    <div id="fn6" class="footnote-box"><p>[6] Based on historical origins: Foil developed in France as a training weapon for real duels. Sabre originates from the mounted combat style of tribes in Central Asia/Eurasia. Hitting below the hips is still considered off-target today.</p></div>
 
     <p>Cum in eodem loco exerceant, hae gentes non pugnant inter se, quoniam eorum leges et mensurae artium non pares sunt. <strong>Sunt tamen</strong> aliqui qui ad duas aut etiam ad omnes tres gentes pertinent.</p>
     <p style="color:#777; margin-top:-0.35rem;"><i>Although they train in the same place, these tribes do not fight among themselves, since their laws and measures of skill are not equal. Nevertheless, there are some fencers who are part of two or even all three tribes.</i></p>
   </main>
+
+  <script>
+    document.addEventListener('click', function (event) {
+      const button = event.target.closest('.footnote-toggle');
+      if (!button) return;
+      const id = button.dataset.footnote;
+      const box = document.getElementById(id);
+      if (!box) return;
+      const willOpen = !box.classList.contains('open');
+      box.classList.toggle('open', willOpen);
+      document.querySelectorAll('.footnote-toggle[data-footnote="' + id + '"]').forEach(function (toggle) {
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+  </script>
 </body>
 </html>
